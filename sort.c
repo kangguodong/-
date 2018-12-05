@@ -1,4 +1,7 @@
-﻿#include <stdio.h>
+#include <stdio.h>
+/*
+	向控制台输出数组
+*/
 void printf_array(int array[], int len)
 {
 	for (int i = 0;i < len;i++)
@@ -7,6 +10,9 @@ void printf_array(int array[], int len)
 	}
 	printf("\n");
 }
+/*
+	冒泡排序
+*/
 void bubbleSort(int array[],int len)
 {
 	for (int i = 0;i < len;i++)
@@ -21,8 +27,12 @@ void bubbleSort(int array[],int len)
 			}
 		}
 	}
+	printf_array(array, len);
 	
 }
+/*
+	选择排序
+*/
 void selectionSort(int array[], int len)
 {
 	int max = 0,tmp=0;
@@ -39,10 +49,12 @@ void selectionSort(int array[], int len)
 		tmp = array[i];
 		array[i] = array[max];
 		array[max] = tmp;
-		printf_array(array, len);
 	}
-
+	printf_array(array, len);
 }
+/*
+	插入排序
+*/
 void insertionSort(int array[], int len)
 {
 	int preIndex = 0, current = 0;
@@ -56,9 +68,8 @@ void insertionSort(int array[], int len)
 			preIndex--;
 		}
 		array[preIndex + 1] = current;
-		printf_array(array, len);
-		
 	}
+	printf_array(array, len);
 }
 int main()
 {
